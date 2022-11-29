@@ -25,7 +25,17 @@
     .summary__text {
         opacity: 0;
         transition: opacity 3s;
-        transition-delay: .7s;
+        transition-delay: 1s;
+    }
+
+
+
+    .skills__container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -37,27 +47,28 @@
         transition-delay: .5s;
     }
 
-   
-
     .ruby {
         transform: translate(-50%, 50%);
         opacity: 0;
-        transition: all 1s;
+        transition: all 1.3s;
         transition-delay: 1s;
     }
-    
+
     .finance {
         transform: translate(50%, 50%);
         opacity: 0;
-        transition: all 1s;
+        transition: all 1.3s;
         transition-delay: 1s;
     }
+
     .scroll-opacity {
         opacity: 1;
         transform: translate(0%, 0%);
     }
 
-
+    .skills__text>p {
+        display: inline-block;
+    }
 </style>
 
 <body>
@@ -87,7 +98,7 @@
             </div>
         </section>
         <section class="summary" data-scroll data-scroll-section>
-            <div class="summary__container container">
+            <div class="summary__container container" data-scroll data-scroll-speed="0.5">
                 <div class="summary__text" data-scroll data-scroll-class="scroll-opacity">
                     <p data-scroll data-scroll-speed="1">I am constantly evolving</p>
                     <p data-scroll data-scroll-speed="1.5">and have made several projects</p>
@@ -152,7 +163,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="projects__project project ruby small-card" data-scroll data-scroll-class="scroll-opacity">
+                <div class="projects__project project ruby small-card" data-scroll data-scroll-class="scroll-opacity"
+                    data-scroll-offset="10%">
                     <div class="project__container">
                         <div class="project__content">
                             <h2 class="project__title">Ruby Home</h2>
@@ -177,11 +189,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="projects__project project finance small-card" data-scroll data-scroll-class="scroll-opacity">
+                <div class="projects__project project finance small-card" data-scroll data-scroll-class="scroll-opacity"
+                    data-scroll-offset="10%">
                     <div class="project__container">
                         <div class="project__content">
                             <h2 class="project__title">Finance</h2>
-                            <!--  <p class="project__text">A simple responsive design landing page, created on native HTML/CSS.</p> -->
                             <div class="project__stack">
                                 <span class="project__technology">HTML</span>
                                 <span class="project__technology">CSS</span>
@@ -203,11 +215,24 @@
         </section>
         <section class="skills" data-scroll data-scroll-section>
             <div class="skills__container container">
-                <p class="skills__text">I love to learn new and take new skills</p>
-                <p class="skills__text">HTML5 CSS3 SaSS BEM JavaScript</p>
-                <p class="skills__text">TypeScript React.js Redux</p>
-                <p class="skills__text">NPM GIT FIGMA</p>
-            </div>
+                <p class="skills__text" data-scroll data-scroll-speed="3">I love to learn new and take new skills</p>
+                <div class="skills__text" data-scroll>
+                    <p data-scroll data-scroll-speed="2.5">HTML5</p>
+                    <p data-scroll data-scroll-speed="3.0">CSS3</p>
+                    <p data-scroll data-scroll-speed="3.5">SaSS</p>
+                    <p data-scroll data-scroll-speed="4.0">BEM</p>
+                    <p data-scroll data-scroll-speed="4.5">JavaScript</p>
+                </div>
+                <div class="skills__text" data-scroll>
+                    <p data-scroll data-scroll-speed="2.5">TypeScript</p>
+                    <p data-scroll data-scroll-speed="3.5">React.js</p>
+                    <p data-scroll data-scroll-speed="4.5">Redux</p>
+                </div>
+                <div class="skills__text" data-scroll>
+                    <p data-scroll data-scroll-speed="2.5">NPM</p>
+                    <p data-scroll data-scroll-speed="3.5">GIT</p>
+                    <p data-scroll data-scroll-speed="4.5">FIGMA</p>
+                </div>
         </section>
         <section class="contacts" data-scroll data-scroll-section>
             <div class="contacts__container container">
@@ -234,6 +259,7 @@
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
             multiplier: ".27",
+
         });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
