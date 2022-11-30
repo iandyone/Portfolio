@@ -1,79 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./js/locomotive-scroll.min.js"></script>
     <title>Andrei Bernatski CV</title>
 </head>
-
-<style>
-    .test {
-        position: absolute;
-        top: 300px;
-    }
-
-    .summary {
-        min-height: 100vh;
-        padding-bottom: 0;
-
-    }
-
-    .summary__text {
-        opacity: 0;
-        transition: opacity 3s;
-        transition-delay: 1s;
-    }
-
-
-
-    .skills__container {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-
-
-    .light-crypto {
-        opacity: 0;
-        transition: opacity 1.5s;
-        transition-delay: .5s;
-    }
-
-    .ruby {
-        transform: translate(-50%, 50%);
-        opacity: 0;
-        transition: all 1.3s;
-        transition-delay: 1s;
-    }
-
-    .finance {
-        transform: translate(50%, 50%);
-        opacity: 0;
-        transition: all 1.3s;
-        transition-delay: 1s;
-    }
-
-    .scroll-opacity {
-        opacity: 1;
-        transform: translate(0%, 0%);
-    }
-
-    .skills__text>p {
-        display: inline-block;
-    }
-</style>
-
 <body>
     <main class="wraper" data-scroll data-scroll-container>
-        <section class="main" data-scroll data-scroll-section>
+        <section class="main" data-scroll data-scroll-section data-scroll-speed="4">
             <div class="main__container container" data-scroll data-scroll-speed="4">
                 <div class="main__emoji">
                     <img src="img/waving_hand.png" alt="waving_hand">
@@ -93,7 +29,8 @@
                         target="_blank"><span>Linkedin</span></a>
                     <a href="https://github.com/iandyone" class="main__button github"
                         target="_blank"><span>GitHub</span></a>
-                    <a href="bernatski_cv.pdf" class="main__button resume" target="_blank"><span>Resume</span></a>
+                    <a href="assets/Bernatski_Front-End_CV.pdf" class="main__button resume"
+                        target="_blank"><span>Resume</span></a>
                 </div>
             </div>
         </section>
@@ -126,10 +63,28 @@
                                 <span class="project__technology">WebSocket</span>
                             </div>
                             <div class="project__buttons">
-                                <a href="https://iandyone-light-crypto.netlify.app" class="project__button visit"
-                                    target="_blank"><span>Visit</span></a>
+                                <a href="https://iandyone-light-crypto.netlify.app" class="project__button visit"target="_blank">
+                                    <span>Visit</span>
+                                    <svg width="17" height="25" viewBox="0 0 17 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5303 13.5303C16.8232 13.2374 16.8232 12.7626 16.5303 12.4697L11.7574 7.6967C11.4645 7.40381 10.9896 7.40381 10.6967 7.6967C10.4038 7.98959 10.4038 8.46447 10.6967 8.75736L14.9393 13L10.6967 17.2426C10.4038 17.5355 10.4038 18.0104 10.6967 18.3033C10.9896 18.5962 11.4645 18.5962 11.7574 18.3033L16.5303 13.5303ZM0 13.75H16V12.25H0L0 13.75Z" />
+                                    </svg>
+                                </a>
                                 <a href="https://github.com/iandyone/Light-Crypto" class="project__button github"
-                                    target="_blank"><span>GitHub</span></a>
+                                    target="_blank">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_226_1164)">
+                                            <path clip-rule="evenodd"
+                                                d="M8.50031 0C4.08031 0 0.500305 3.58 0.500305 8C0.500305 11.54 2.7903 14.53 5.9703 15.59C6.37031 15.66 6.52031 15.42 6.52031 15.21C6.52031 15.02 6.51031 14.39 6.51031 13.72C4.50031 14.09 3.98031 13.23 3.82031 12.78C3.73031 12.55 3.34031 11.84 3.00031 11.65C2.72031 11.5 2.32031 11.13 2.99031 11.12C3.62031 11.11 4.07031 11.7 4.22031 11.94C4.94031 13.15 6.09031 12.81 6.55031 12.6C6.62031 12.08 6.83031 11.73 7.06031 11.53C5.2803 11.33 3.42031 10.64 3.42031 7.58C3.42031 6.71 3.73031 5.99 4.24031 5.43C4.16031 5.23 3.88031 4.41 4.32031 3.31C4.32031 3.31 4.9903 3.1 6.52031 4.13C7.16031 3.95 7.84031 3.86 8.52031 3.86C9.20031 3.86 9.88031 3.95 10.5203 4.13C12.0503 3.09 12.7203 3.31 12.7203 3.31C13.1603 4.41 12.8803 5.23 12.8003 5.43C13.3103 5.99 13.6203 6.7 13.6203 7.58C13.6203 10.65 11.7503 11.33 9.97031 11.53C10.2603 11.78 10.5103 12.26 10.5103 13.01C10.5103 14.08 10.5003 14.94 10.5003 15.21C10.5003 15.42 10.6503 15.67 11.0503 15.59C14.2103 14.53 16.5003 11.53 16.5003 8C16.5003 3.58 12.9203 0 8.50031 0Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_226_1164">
+                                                <rect width="16" height="16" transform="translate(0.500305)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>GitHub</p>
+                                </a>
                             </div>
                         </div>
                         <div class="project__icon">
@@ -137,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projects__project project users">
+                <div class="projects__project project users" data-scroll>
                     <div class="project__container">
                         <div class="project__content">
                             <h2 class="project__title">GitHub Users</h2>
@@ -152,10 +107,29 @@
                                 <span class="project__technology">Redux-thunk</span>
                             </div>
                             <div class="project__buttons">
-                                <a href="https://iandyone-github-users.netlify.app/" class="project__button visit"
-                                    target="_blank"><span>Visit</span></a>
-                                <a href="https://github.com/iandyone/Users" class="project__button github"
-                                    target="_blank"><span>GitHub</span></a>
+                                <a href="https://iandyone-light-crypto.netlify.app" class="project__button visit"
+                                    target="_blank">
+                                    <span>Visit</span>
+                                    <svg width="17" height="25" viewBox="0 0 17 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5303 13.5303C16.8232 13.2374 16.8232 12.7626 16.5303 12.4697L11.7574 7.6967C11.4645 7.40381 10.9896 7.40381 10.6967 7.6967C10.4038 7.98959 10.4038 8.46447 10.6967 8.75736L14.9393 13L10.6967 17.2426C10.4038 17.5355 10.4038 18.0104 10.6967 18.3033C10.9896 18.5962 11.4645 18.5962 11.7574 18.3033L16.5303 13.5303ZM0 13.75H16V12.25H0L0 13.75Z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/iandyone/Light-Crypto" class="project__button github"
+                                    target="_blank">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_226_1164)">
+                                            <path clip-rule="evenodd"
+                                                d="M8.50031 0C4.08031 0 0.500305 3.58 0.500305 8C0.500305 11.54 2.7903 14.53 5.9703 15.59C6.37031 15.66 6.52031 15.42 6.52031 15.21C6.52031 15.02 6.51031 14.39 6.51031 13.72C4.50031 14.09 3.98031 13.23 3.82031 12.78C3.73031 12.55 3.34031 11.84 3.00031 11.65C2.72031 11.5 2.32031 11.13 2.99031 11.12C3.62031 11.11 4.07031 11.7 4.22031 11.94C4.94031 13.15 6.09031 12.81 6.55031 12.6C6.62031 12.08 6.83031 11.73 7.06031 11.53C5.2803 11.33 3.42031 10.64 3.42031 7.58C3.42031 6.71 3.73031 5.99 4.24031 5.43C4.16031 5.23 3.88031 4.41 4.32031 3.31C4.32031 3.31 4.9903 3.1 6.52031 4.13C7.16031 3.95 7.84031 3.86 8.52031 3.86C9.20031 3.86 9.88031 3.95 10.5203 4.13C12.0503 3.09 12.7203 3.31 12.7203 3.31C13.1603 4.41 12.8803 5.23 12.8003 5.43C13.3103 5.99 13.6203 6.7 13.6203 7.58C13.6203 10.65 11.7503 11.33 9.97031 11.53C10.2603 11.78 10.5103 12.26 10.5103 13.01C10.5103 14.08 10.5003 14.94 10.5003 15.21C10.5003 15.42 10.6503 15.67 11.0503 15.59C14.2103 14.53 16.5003 11.53 16.5003 8C16.5003 3.58 12.9203 0 8.50031 0Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_226_1164">
+                                                <rect width="16" height="16" transform="translate(0.500305)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>GitHub</p>
+                                </a>
                             </div>
                             <div class="project__icon">
                                 <img src="img/projects/users.png" alt="">
@@ -168,7 +142,6 @@
                     <div class="project__container">
                         <div class="project__content">
                             <h2 class="project__title">Ruby Home</h2>
-                            <!-- <p class="project__text">A responsive design landing page created using SASS preprocessor and animation libraries.</p> -->
                             <div class="project__stack">
                                 <span class="project__technology">HTML</span>
                                 <span class="project__technology">CSS</span>
@@ -178,10 +151,29 @@
                                 <span class="project__technology">Font Awesome</span>
                             </div>
                             <div class="project__buttons">
-                                <a href="https://iandyone.github.io/Ruby" class="project__button visit"
-                                    target="_blank"><span>Visit</span></a>
-                                <a href="https://github.com/iandyone/Ruby" class="project__button github"
-                                    target="_blank"><span>GitHub</span></a>
+                                <a href="https://iandyone-light-crypto.netlify.app" class="project__button visit"
+                                    target="_blank">
+                                    <span>Visit</span>
+                                    <svg width="17" height="25" viewBox="0 0 17 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5303 13.5303C16.8232 13.2374 16.8232 12.7626 16.5303 12.4697L11.7574 7.6967C11.4645 7.40381 10.9896 7.40381 10.6967 7.6967C10.4038 7.98959 10.4038 8.46447 10.6967 8.75736L14.9393 13L10.6967 17.2426C10.4038 17.5355 10.4038 18.0104 10.6967 18.3033C10.9896 18.5962 11.4645 18.5962 11.7574 18.3033L16.5303 13.5303ZM0 13.75H16V12.25H0L0 13.75Z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/iandyone/Light-Crypto" class="project__button github"
+                                    target="_blank">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_226_1164)">
+                                            <path clip-rule="evenodd"
+                                                d="M8.50031 0C4.08031 0 0.500305 3.58 0.500305 8C0.500305 11.54 2.7903 14.53 5.9703 15.59C6.37031 15.66 6.52031 15.42 6.52031 15.21C6.52031 15.02 6.51031 14.39 6.51031 13.72C4.50031 14.09 3.98031 13.23 3.82031 12.78C3.73031 12.55 3.34031 11.84 3.00031 11.65C2.72031 11.5 2.32031 11.13 2.99031 11.12C3.62031 11.11 4.07031 11.7 4.22031 11.94C4.94031 13.15 6.09031 12.81 6.55031 12.6C6.62031 12.08 6.83031 11.73 7.06031 11.53C5.2803 11.33 3.42031 10.64 3.42031 7.58C3.42031 6.71 3.73031 5.99 4.24031 5.43C4.16031 5.23 3.88031 4.41 4.32031 3.31C4.32031 3.31 4.9903 3.1 6.52031 4.13C7.16031 3.95 7.84031 3.86 8.52031 3.86C9.20031 3.86 9.88031 3.95 10.5203 4.13C12.0503 3.09 12.7203 3.31 12.7203 3.31C13.1603 4.41 12.8803 5.23 12.8003 5.43C13.3103 5.99 13.6203 6.7 13.6203 7.58C13.6203 10.65 11.7503 11.33 9.97031 11.53C10.2603 11.78 10.5103 12.26 10.5103 13.01C10.5103 14.08 10.5003 14.94 10.5003 15.21C10.5003 15.42 10.6503 15.67 11.0503 15.59C14.2103 14.53 16.5003 11.53 16.5003 8C16.5003 3.58 12.9203 0 8.50031 0Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_226_1164">
+                                                <rect width="16" height="16" transform="translate(0.500305)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>GitHub</p>
+                                </a>
                             </div>
                             <div class="project__icon small-card">
                                 <img src="img/projects/ruby.png" alt="">
@@ -200,10 +192,29 @@
                                 <span class="project__technology">JavaScript</span>
                             </div>
                             <div class="project__buttons">
-                                <a href="https://iandyone.github.io/Finance" class="project__button visit"
-                                    target="_blank"><span>Visit</span></a>
-                                <a href="https://github.com/iandyone/Finance" class="project__button github"
-                                    target="_blank"><span>GitHub</span></a>
+                                <a href="https://iandyone-light-crypto.netlify.app" class="project__button visit"
+                                    target="_blank">
+                                    <span>Visit</span>
+                                    <svg width="17" height="25" viewBox="0 0 17 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5303 13.5303C16.8232 13.2374 16.8232 12.7626 16.5303 12.4697L11.7574 7.6967C11.4645 7.40381 10.9896 7.40381 10.6967 7.6967C10.4038 7.98959 10.4038 8.46447 10.6967 8.75736L14.9393 13L10.6967 17.2426C10.4038 17.5355 10.4038 18.0104 10.6967 18.3033C10.9896 18.5962 11.4645 18.5962 11.7574 18.3033L16.5303 13.5303ZM0 13.75H16V12.25H0L0 13.75Z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/iandyone/Light-Crypto" class="project__button github"
+                                    target="_blank">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_226_1164)">
+                                            <path clip-rule="evenodd"
+                                                d="M8.50031 0C4.08031 0 0.500305 3.58 0.500305 8C0.500305 11.54 2.7903 14.53 5.9703 15.59C6.37031 15.66 6.52031 15.42 6.52031 15.21C6.52031 15.02 6.51031 14.39 6.51031 13.72C4.50031 14.09 3.98031 13.23 3.82031 12.78C3.73031 12.55 3.34031 11.84 3.00031 11.65C2.72031 11.5 2.32031 11.13 2.99031 11.12C3.62031 11.11 4.07031 11.7 4.22031 11.94C4.94031 13.15 6.09031 12.81 6.55031 12.6C6.62031 12.08 6.83031 11.73 7.06031 11.53C5.2803 11.33 3.42031 10.64 3.42031 7.58C3.42031 6.71 3.73031 5.99 4.24031 5.43C4.16031 5.23 3.88031 4.41 4.32031 3.31C4.32031 3.31 4.9903 3.1 6.52031 4.13C7.16031 3.95 7.84031 3.86 8.52031 3.86C9.20031 3.86 9.88031 3.95 10.5203 4.13C12.0503 3.09 12.7203 3.31 12.7203 3.31C13.1603 4.41 12.8803 5.23 12.8003 5.43C13.3103 5.99 13.6203 6.7 13.6203 7.58C13.6203 10.65 11.7503 11.33 9.97031 11.53C10.2603 11.78 10.5103 12.26 10.5103 13.01C10.5103 14.08 10.5003 14.94 10.5003 15.21C10.5003 15.42 10.6503 15.67 11.0503 15.59C14.2103 14.53 16.5003 11.53 16.5003 8C16.5003 3.58 12.9203 0 8.50031 0Z" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_226_1164">
+                                                <rect width="16" height="16" transform="translate(0.500305)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>GitHub</p>
+                                </a>
                             </div>
                             <div class="project__icon small-card">
                                 <img src="img/projects/finance.png" alt="">
@@ -213,25 +224,25 @@
                 </div>
             </div>
         </section>
-        <section class="skills" data-scroll data-scroll-section>
-            <div class="skills__container container">
-                <p class="skills__text" data-scroll data-scroll-speed="3">I love to learn new and take new skills</p>
+        <section class="skills" data-scroll data-scroll-section >
+            <div class="skills__container container" data-scroll data-scroll-class="scroll-opacity">
+                <p class="skills__text" data-scroll data-scroll-speed="2">I love to learn new and take new skills</p>
                 <div class="skills__text" data-scroll>
-                    <p data-scroll data-scroll-speed="2.5">HTML5</p>
-                    <p data-scroll data-scroll-speed="3.0">CSS3</p>
-                    <p data-scroll data-scroll-speed="3.5">SaSS</p>
-                    <p data-scroll data-scroll-speed="4.0">BEM</p>
-                    <p data-scroll data-scroll-speed="4.5">JavaScript</p>
+                    <p data-scroll data-scroll-speed="1.5">HTML5</p>
+                    <p data-scroll data-scroll-speed="2.0">CSS3</p>
+                    <p data-scroll data-scroll-speed="2.5">SaSS</p>
+                    <p data-scroll data-scroll-speed="3.0">BEM</p>
+                    <p data-scroll data-scroll-speed="3.2">JavaScript</p>
                 </div>
                 <div class="skills__text" data-scroll>
-                    <p data-scroll data-scroll-speed="2.5">TypeScript</p>
-                    <p data-scroll data-scroll-speed="3.5">React.js</p>
-                    <p data-scroll data-scroll-speed="4.5">Redux</p>
+                    <p data-scroll data-scroll-speed="1.5">TypeScript</p>
+                    <p data-scroll data-scroll-speed="2.5">React.js</p>
+                    <p data-scroll data-scroll-speed="3.5">Redux</p>
                 </div>
                 <div class="skills__text" data-scroll>
-                    <p data-scroll data-scroll-speed="2.5">NPM</p>
-                    <p data-scroll data-scroll-speed="3.5">GIT</p>
-                    <p data-scroll data-scroll-speed="4.5">FIGMA</p>
+                    <p data-scroll data-scroll-speed="1.5">NPM</p>
+                    <p data-scroll data-scroll-speed="2.5">GIT</p>
+                    <p data-scroll data-scroll-speed="3.5">FIGMA</p>
                 </div>
         </section>
         <section class="contacts" data-scroll data-scroll-section>
@@ -250,22 +261,10 @@
                         target="_blank"><span>GitHub</span></a>
                     <a href="bernatski_cv.pdf" class="contacts__button resume" target="_blank"><span>Resume</span></a>
                 </div>
+                <img src="./img/сlapping_hands.svg" alt="сlapping_hands">
             </div>
         </section>
     </main>
-    <script src="js/locomotive-scroll.min.js"></script>
-    <script>
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            multiplier: ".27",
-
-        });
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="./js/index.js"></script>
 </body>
-
 </html>
