@@ -250,26 +250,6 @@ svg path {
   margin: 0px auto;
 }
 
-.email > span {
-  background: url("../img/email.svg") left center no-repeat;
-}
-
-.telegram > span {
-  background: url("../img/telegram.svg") left center no-repeat;
-}
-
-.linkedin > span {
-  background: url("../img/linkedin.svg") left center no-repeat;
-}
-
-.github > span {
-  background: url("../img/github.svg") left center no-repeat;
-}
-
-.resume > span {
-  background: url("../img/resume.svg") left center no-repeat;
-}
-
 .small-card {
   -webkit-box-flex: 0 !important;
       -ms-flex: 0 1 49% !important;
@@ -357,11 +337,33 @@ svg path {
 }
 
 .main__button {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
   padding: 12px 24px;
 }
 
-.main__button span {
-  padding-left: 22px;
+.main__button > svg path {
+  fill: #ffffff;
+}
+
+.main__button:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #080808;
+}
+
+.main__button:hover > svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  fill: #080808;
 }
 
 .summary {
@@ -1089,11 +1091,33 @@ svg path {
 }
 
 .contacts__button {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
   padding: 12px 24px;
 }
 
-.contacts__button span {
-  padding-left: 22px;
+.contacts__button > svg path {
+  fill: #ffffff;
+}
+
+.contacts__button:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #080808;
+}
+
+.contacts__button:hover > svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  fill: #080808;
 }
 
 @-webkit-keyframes link {
