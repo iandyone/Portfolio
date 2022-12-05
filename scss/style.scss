@@ -10,12 +10,12 @@
 .wraper {
     min-height: 100%;
     background-color: $mainColor;
-    padding: 0px 20px;
-    box-sizing: content-box;
     overflow: hidden;
 }
 
 .container {
+    box-sizing: content-box;
+    padding: 0px 20px;
     max-width: 940px;
     margin: 0px auto;
 }
@@ -85,13 +85,36 @@
 }
 
 .summary {
-    max-width: 720px;
-    margin: 0px auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        width: 240px;
+        height: 240px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &::before {
+        left: -1%;
+        background: url("../img/smile.svg") center no-repeat;
+    }
+
+    &::after {
+        right: -1%;
+        background: url("../img/backhand.svg") center no-repeat;
+    }
+
     @media (max-width: 992px) {
         min-height: 60vh;
     }
@@ -106,7 +129,7 @@
         @extend %text;
         opacity: 0;
         transition: opacity 2s;
-        transition-delay: .3s;
+        transition-delay: 0.3s;
 
         span {
             color: $green;
@@ -414,6 +437,30 @@
     justify-content: center;
     align-items: flex-end;
 
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 240px;
+        height: 240px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &::before {
+        left: -1%;
+        background: url("../img/smile.svg") center no-repeat;
+    }
+
+    &::after {
+        right: -1%;
+        background: url("../img/backhand.svg") center no-repeat;
+    }
+
     @media (max-width: 992px) {
         align-items: center;
         min-height: 60vh;
@@ -433,7 +480,7 @@
         @extend %text;
 
         &:not(:first-child) {
-            word-spacing: 40px;
+            word-spacing: 33px;
             @media (max-width: 768px) {
                 word-spacing: 10px;
             }
@@ -452,7 +499,7 @@
         &__container {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: colum1n;
             justify-content: center;
             align-items: center;
         }

@@ -239,13 +239,13 @@ svg path {
 .wraper {
   min-height: 100%;
   background-color: #080808;
-  padding: 0px 20px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
   overflow: hidden;
 }
 
 .container {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0px 20px;
   max-width: 940px;
   margin: 0px auto;
 }
@@ -367,8 +367,6 @@ svg path {
 }
 
 .summary {
-  max-width: 720px;
-  margin: 0px auto;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +377,33 @@ svg path {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.summary::before, .summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 240px;
+  height: 240px;
+}
+
+@media (max-width: 1024px) {
+  .summary::before, .summary::after {
+    display: none;
+  }
+}
+
+.summary::before {
+  left: -1%;
+  background: url("../img/smile.svg") center no-repeat;
+}
+
+.summary::after {
+  right: -1%;
+  background: url("../img/backhand.svg") center no-repeat;
 }
 
 @media (max-width: 992px) {
@@ -401,8 +426,8 @@ svg path {
   opacity: 0;
   -webkit-transition: opacity 2s;
   transition: opacity 2s;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .summary__text span {
@@ -964,6 +989,31 @@ svg path {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: relative;
+}
+
+.skills::before, .skills::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 240px;
+  height: 240px;
+}
+
+@media (max-width: 1024px) {
+  .skills::before, .skills::after {
+    display: none;
+  }
+}
+
+.skills::before {
+  left: -1%;
+  background: url("../img/smile.svg") center no-repeat;
+}
+
+.skills::after {
+  right: -1%;
+  background: url("../img/backhand.svg") center no-repeat;
 }
 
 @media (max-width: 992px) {
@@ -990,7 +1040,7 @@ svg path {
 }
 
 .skills__text:not(:first-child) {
-  word-spacing: 40px;
+  word-spacing: 33px;
 }
 
 @media (max-width: 768px) {
@@ -1020,8 +1070,8 @@ svg path {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: colum1n;
+          flex-direction: colum1n;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
